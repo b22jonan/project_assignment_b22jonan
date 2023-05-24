@@ -23,11 +23,7 @@
         android:layout_width="363dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Introducing PokeInfo, the ultimate Pokémon companion app designed for fans and Trainers alike!
-Discover a world of Pokémon knowledge at your fingertips.\n\n
-Whether you're a dedicated Pokémon Trainer, a casual fan, or someone looking to delve into the fascinating world of Pokémon,
-PokeInfo is the perfect app for you. Stay up to date with over 2 Pokémon species and dive into the captivating details of each Pokémon.\n\n
-Download PokeInfo today and embark on an adventure filled with knowledge and discovery."
+        android:text="Introducing PokeInfo, an incredible companion app crafted specifically for Pokémon enthusiasts and Trainers alike! Get ready to explore a realm of Pokémon wisdom right from the palm of your hand. Whether you're a devoted Pokémon Trainer, a casual fan seeking some fun, or an eager explorer eager to delve into the captivating world of Pokémon, PokeInfo is the ideal app to accompany you. With PokeInfo, you'll always be in the loop with information on over 2 Pokémon species, and you can immerse yourself in the fascinating intricacies of each and every one of them. So why wait? Take the plunge into a wondrous journey of knowledge and discovery by downloading PokeInfo today!"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,4 +31,15 @@ Download PokeInfo today and embark on an adventure filled with knowledge and dis
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/About"
         app:layout_constraintVertical_bias="0.184" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/returnbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
 </androidx.constraintlayout.widget.ConstraintLayout>

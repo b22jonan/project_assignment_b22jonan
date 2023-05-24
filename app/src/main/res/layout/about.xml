@@ -24,13 +24,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Introducing PokeInfo, the ultimate Pokémon companion app designed for fans and Trainers alike!
-        Discover a world of Pokémon knowledge at your fingertips. With PokeInfo,
-        you can easily search for and filter Pokémon by generation and type, making it a breeze to find the information you need.\n
-        Whether you're a dedicated Pokémon Trainer, a casual fan, or someone looking to delve into the fascinating world of Pokémon,
-        PokeInfo is the perfect app for you. Stay up to date with over 800 Pokémon species and dive into the captivating details of each Pokémon.
-        With our user-friendly search and filtering features, finding your favorite Pokémon or building the perfect team has never been easier.\n
-        Download PokeInfo today and embark on an adventure filled with knowledge and discovery. Join a community"
-        android:textSize="16sp"
+Discover a world of Pokémon knowledge at your fingertips.\n\n
+Whether you're a dedicated Pokémon Trainer, a casual fan, or someone looking to delve into the fascinating world of Pokémon,
+PokeInfo is the perfect app for you. Stay up to date with over 2 Pokémon species and dive into the captivating details of each Pokémon.\n\n
+Download PokeInfo today and embark on an adventure filled with knowledge and discovery."
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.482"

@@ -10,8 +10,8 @@
         android:id="@+id/About"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="About"
+        android:layout_marginTop="64dp"
+        android:text="About us"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -20,20 +20,17 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="382dp"
-        android:layout_height="677dp"
+        android:layout_width="363dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Welcome to PokeInfo, your ultimate companion app for all things Pokémon! With PokeInfo, you can dive into a world filled with captivating creatures, discovering valuable information at your fingertips. Whether you're a seasoned Pokémon Trainer or just beginning your journey, this app is your go-to resource for everything you need to know about these fantastic creatures.\n
-        Explore an extensive database of over 800 Pokémon species, from the first generation all the way up to the latest additions. With our powerful search feature, you can effortlessly find any Pokémon you desire. Simply enter the name or even just a fragment of the name, and PokeInfo will provide you with comprehensive details about the Pokémon, including its type and evolutions.\n
-        Our user-friendly filtering system allows you to narrow down your search even further. Looking for Pokémon from a specific generation? No problem! Select the desired generation filter, and instantly access a curated list of Pokémon exclusive to that era. Want to find Pokémon of a specific type? PokeInfo has got you covered! Choose from a variety of elemental types, such as Fire, Water, Electric, Grass, and many more, to find the perfect Pokémon that suits your battle strategy.\n
-        Stay up to date with the latest Pokémon releases, as PokeInfo is regularly updated with new Pokémon and their associated details. Never miss out on the opportunity to catch 'em all!\n
-        But that's not all! PokeInfo offers additional features to enhance your Pokémon experience. Learn about each Pokémon's strengths and weaknesses with our type effectiveness chart, helping you formulate winning strategies for battles. You can also save your favorite Pokémon to a personal collection, creating a personalized Pokédex tailored to your preferences.\n
-        Whether you're a competitive Trainer, a casual player, or a Pokédex completionist, PokeInfo is the must-have app to satisfy your Pokémon curiosity and assist you on your journey to become a Pokémon Master. Download PokeInfo today and embark on an adventure filled with knowledge, discovery, and endless Pokémon possibilities!"
-
-
+        android:text="Introducing PokeInfo, the ultimate Pokémon companion app designed for fans and Trainers alike! Discover a world of Pokémon knowledge at your fingertips. With PokeInfo, you can easily search for and filter Pokémon by generation and type, making it a breeze to find the information you need.\n
+        Whether you're a dedicated Pokémon Trainer, a casual fan, or someone looking to delve into the fascinating world of Pokémon, PokeInfo is the perfect app for you. Stay up to date with over 800 Pokémon species and dive into the captivating details of each Pokémon. With our user-friendly search and filtering features, finding your favorite Pokémon or building the perfect team has never been easier.\n
+        Download PokeInfo today and embark on an adventure filled with knowledge and discovery. Join a community"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/About" />
+        app:layout_constraintTop_toBottomOf="@+id/About"
+        app:layout_constraintVertical_bias="0.184" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,9 +1,12 @@
 package com.example.project_assignment_b22jonan;
 
-import android.util.Log;
-
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 
 
 public class Pokemon {
@@ -28,6 +31,8 @@ public class Pokemon {
 
     // getters
     public String getID() {
+        // remove last 8 characters from ID
+        ID = ID.substring(0, ID.length() - 8);
         return ID;
     }
 
@@ -36,23 +41,31 @@ public class Pokemon {
     }
 
     public String getGeneration() {
-        return generation;
+        return "gen: "+ generation;
     }
 
     public String getImage() {
         return Image;
     }
 
-    public String[] getTypes() {
-        String[] types;
-        // put all the types in the array
-        types = new String[Types.size()];
-        Log.d("Types", Types.toString());
-        int i = 0;
-        for (String type : Types.keySet()) {
-            types[i] = type;
-            i++;
+    public String[] getTypes()  {
+        try {
+            String JSONString = Types.toString();
+            JSONObject jsonObject = new JSONObject(JSONString);
+            JSONArray typesArray = jsonObject.getJSONArray("Types");
+
+            String[] types = new String[typesArray.length()];
+            for (int i = 0; i < typesArray.length(); i++) {
+                types[i] = typesArray.getString(i);
+            }
+
+            return types;
+        } catch (JSONException e) {
+            e.printStackTrace();
+            return new String[0];
         }
-        return types;
+
+
+
     }
 }

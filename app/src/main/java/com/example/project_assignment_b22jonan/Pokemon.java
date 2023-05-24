@@ -1,18 +1,19 @@
 package com.example.project_assignment_b22jonan;
 
+import android.util.Log;
+
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
 
 
 public class Pokemon {
     protected String ID;
-    @SerializedName(value = "Name", alternate = "name")
-    protected String name; // Name
-    @SerializedName(value = "Location", alternate = "generation")
+    protected String name;
+    @SerializedName(value = "location", alternate = "generation")
     protected String generation; // Location
-    @SerializedName(value = "Size", alternate = "Image")
-    protected String Image;  // Size
-    @SerializedName(value = "AuxData", alternate = "Types")
+    @SerializedName(value = "company", alternate = "Image")
+    protected String Image;  // Company
+    @SerializedName(value = "auxdata", alternate = "Types")
     protected JsonObject Types; // AuxData
 
     @Override
@@ -46,6 +47,7 @@ public class Pokemon {
         String[] types;
         // put all the types in the array
         types = new String[Types.size()];
+        Log.d("Types", Types.toString());
         int i = 0;
         for (String type : Types.keySet()) {
             types[i] = type;

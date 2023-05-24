@@ -10,8 +10,8 @@ public class Pokemon {
     protected String name; // Name
     @SerializedName(value = "Location", alternate = "generation")
     protected String generation; // Location
-    @SerializedName(value = "Size", alternate = "EvolutionStage")
-    protected String evolutionStage;  // Size
+    @SerializedName(value = "Size", alternate = "Image")
+    protected String Image;  // Size
     @SerializedName(value = "AuxData", alternate = "Types")
     protected JsonObject Types; // AuxData
 
@@ -21,7 +21,6 @@ public class Pokemon {
                 "ID='" + ID + '\'' +
                 ", name='" + name + '\'' +
                 ", generation='" + generation + '\'' +
-                ", evolutionStage='" + evolutionStage + '\'' +
                 ", Types=" + Types +
                 '}';
     }
@@ -39,8 +38,8 @@ public class Pokemon {
         return generation;
     }
 
-    public String getEvolutionStage() {
-        return evolutionStage;
+    public String getImage() {
+        return Image;
     }
 
     public JsonObject getTypes() {

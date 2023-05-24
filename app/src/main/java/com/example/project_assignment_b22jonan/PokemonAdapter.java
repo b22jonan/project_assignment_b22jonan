@@ -42,17 +42,17 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.MyViewHo
         Glide.with(context).load(pokemonList.get(position).getImage()).into(holder.image);
         String[] types = pokemonList.get(position).getTypes();
         if (types.length == 1){
-            holder.types[0].setImageResource(context.getResources().getIdentifier(types[0].toLowerCase(), "drawable", context.getPackageName()));
+            Glide.with(context).load(pokemonList.get(position).getImage()).into(holder.types[0]);
             holder.types[1].setVisibility(View.GONE);
             holder.types[2].setVisibility(View.GONE);
         } else if (types.length == 2){
-            holder.types[0].setImageResource(context.getResources().getIdentifier(types[0].toLowerCase(), "drawable", context.getPackageName()));
-            holder.types[1].setImageResource(context.getResources().getIdentifier(types[1].toLowerCase(), "drawable", context.getPackageName()));
+            Glide.with(context).load(pokemonList.get(position).getImage()).into(holder.types[0]);
+            Glide.with(context).load(pokemonList.get(position).getImage()).into(holder.types[1]);
             holder.types[2].setVisibility(View.GONE);
         } else {
-            holder.types[0].setImageResource(context.getResources().getIdentifier(types[0].toLowerCase(), "drawable", context.getPackageName()));
-            holder.types[1].setImageResource(context.getResources().getIdentifier(types[1].toLowerCase(), "drawable", context.getPackageName()));
-            holder.types[2].setImageResource(context.getResources().getIdentifier(types[2].toLowerCase(), "drawable", context.getPackageName()));
+            Glide.with(context).load(pokemonList.get(position).getImage()).into(holder.types[0]);
+            Glide.with(context).load(pokemonList.get(position).getImage()).into(holder.types[1]);
+            Glide.with(context).load(pokemonList.get(position).getImage()).into(holder.types[2]);
         }
     }
 

@@ -26,7 +26,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener {
 
-    private final String JSON_URL = "example";
+    private final String JSON_URL = "https://mobprog.webug.se/json-api?login=b22jonan";
 
 
     @Override
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
     @Override
     public void onPostExecute(String json) {
-        Log.d("MainActivity", json);
+        //Log.d("MainActivity", json);
 
         Gson gson = new Gson();
         Type listType = new TypeToken<ArrayList<Pokemon>>(){}.getType();

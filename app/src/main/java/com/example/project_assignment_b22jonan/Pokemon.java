@@ -42,13 +42,15 @@ public class Pokemon {
         return Image;
     }
 
-    public JsonObject getTypes() {
-        return Types;
+    public String[] getTypes() {
+        String[] types;
+        // put all the types in the array
+        types = new String[Types.size()];
+        int i = 0;
+        for (String type : Types.keySet()) {
+            types[i] = type;
+            i++;
+        }
+        return types;
     }
-
-    public String getType1() {
-        // TODO: return the pokemon types as imagepaths
-        return "";
-    }
-
 }

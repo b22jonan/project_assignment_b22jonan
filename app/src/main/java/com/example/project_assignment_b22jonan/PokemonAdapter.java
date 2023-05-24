@@ -1,6 +1,7 @@
 package com.example.project_assignment_b22jonan;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 import java.util.List;
 
@@ -39,20 +41,20 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.MyViewHo
         holder.ID.setText(pokemonList.get(position).getID());
         holder.name.setText(pokemonList.get(position).getName());
         holder.generation.setText(pokemonList.get(position).getGeneration());
-        Glide.with(context).load(pokemonList.get(position).getImage()).into(holder.image);
+        Glide.with(context).load(pokemonList.get(position).getImage()).apply(new RequestOptions().override(512,512)).into(holder.image);
         String[] types = pokemonList.get(position).getTypes();
         if (types.length == 1){
-            Glide.with(context).load(pokemonList.get(position).getImage()).into(holder.types[0]);
+            Glide.with(context).load(pokemonList.get(position).getTypes()[0]).apply(new RequestOptions().override(300,300)).into(holder.types[0]);
             holder.types[1].setVisibility(View.GONE);
             holder.types[2].setVisibility(View.GONE);
         } else if (types.length == 2){
-            Glide.with(context).load(pokemonList.get(position).getImage()).into(holder.types[0]);
-            Glide.with(context).load(pokemonList.get(position).getImage()).into(holder.types[1]);
+            Glide.with(context).load(pokemonList.get(position).getTypes()[0]).apply(new RequestOptions().override(300,300)).into(holder.types[0]);
+            Glide.with(context).load(pokemonList.get(position).getTypes()[1]).apply(new RequestOptions().override(300,300)).into(holder.types[1]);
             holder.types[2].setVisibility(View.GONE);
         } else {
-            Glide.with(context).load(pokemonList.get(position).getImage()).into(holder.types[0]);
-            Glide.with(context).load(pokemonList.get(position).getImage()).into(holder.types[1]);
-            Glide.with(context).load(pokemonList.get(position).getImage()).into(holder.types[2]);
+            Glide.with(context).load(pokemonList.get(position).getTypes()[0]).apply(new RequestOptions().override(300,300)).into(holder.types[0]);
+            Glide.with(context).load(pokemonList.get(position).getTypes()[1]).apply(new RequestOptions().override(300,300)).into(holder.types[1]);
+            Glide.with(context).load(pokemonList.get(position).getTypes()[2]).apply(new RequestOptions().override(300,300)).into(holder.types[2]);
         }
     }
 
